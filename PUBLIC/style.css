@@ -20,4 +20,27 @@
     max-width: 4rem;
     max-height: 3rem;
 }
-
+.home{
+    border: 2px solid rgb(9, 255, 0);
+}
+.container{
+    /* background-color: red; */
+}
+.home-container{
+    border: 2px solid grey;
+}
+@media screen and (max-width:600px){
+    .home-container{
+        border: 2px solid blue;
+        display: grid;
+    }
+    .container{
+        background-color: white;
+    }
+    .slider{
+        margin: 1rem 0 0 0;
+        border: 2px solid greenyellow;
+        max-width: 30rem;
+        max-height: 30rem;
+    }
+}
