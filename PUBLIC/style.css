@@ -34,6 +34,6 @@
     }
     .carousel-item img{
         max-width: 30rem;
-        max-height: 30rem;
+        max-height: 25rem;
     }
 }
