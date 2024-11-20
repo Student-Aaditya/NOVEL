@@ -1,0 +1,11 @@
+.navbar{
+    border: 5px solid black;
+}
+.navbar-log{
+    border: 2px solid red;
+    display: flex;
+    margin: 0 2px 0 0;
+}
+.navbar-log a{
+    margin: 0 2px 0 8px ;
+}
