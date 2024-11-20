@@ -1,11 +1,23 @@
 .navbar{
-    border: 5px solid black;
+    border: 2px solid black;
 }
 .navbar-log{
-    border: 2px solid red;
     display: flex;
-    margin: 0 2px 0 0;
+    margin: 0 1rem 0 0;
+    font-size: 1.2rem;
 }
 .navbar-log a{
-    margin: 0 2px 0 8px ;
+    margin: 0 1rem 0 2rem ;
 }
+.navbar-nav{
+    margin: 0 0 0 4rem;
+    font-size: 1.2rem;
+}
+.navbar-nav a{
+    margin: 0 3rem 0 0;
+}
+.navbar-brand img{
+    max-width: 4rem;
+    max-height: 3rem;
+}
+
