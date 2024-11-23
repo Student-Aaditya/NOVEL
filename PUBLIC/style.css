@@ -33,12 +33,12 @@
         height: 30rem;
     }
     .carousel-item img{
-        width: 30rem;
+        max-width: 25rem;
         height: 25rem;
     }
     .card{
         margin: 1rem 0 0 2rem;
-        width: 18rem;
+        max-width: 18rem;
         height: 16rem;
 
     }
