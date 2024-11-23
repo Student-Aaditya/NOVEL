@@ -36,4 +36,10 @@
         max-width: 30rem;
         max-height: 25rem;
     }
+    .card{
+        max-width: 14rem;
+        max-height: 13rem;
+        margin: 1rem 0 0 2rem;
+
+    }
 }
