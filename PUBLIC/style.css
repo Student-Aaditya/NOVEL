@@ -29,12 +29,12 @@
     }
     .slider{
         margin: 1rem 0 0 0;
-        max-width: 30rem;
-        max-height: 30rem;
+        width: 30rem;
+        height: 30rem;
     }
     .carousel-item img{
-        max-width: 30rem;
-        max-height: 25rem;
+        width: 30rem;
+        height: 25rem;
     }
     .card{
         margin: 1rem 0 0 2rem;
