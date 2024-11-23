@@ -28,8 +28,8 @@
         background-color: white;
     }
     .slider{
-        margin: 1rem 0 0 0;
-        width: 30rem;
+        margin: 1rem 0 0 1rem;
+        width: 28rem;
         height: 30rem;
     }
     .carousel-item img{
@@ -37,9 +37,17 @@
         height: 25rem;
     }
     .card{
-        margin: 1rem 0 0 2rem;
+        margin: 0 0 1rem 3rem;
         max-width: 18rem;
         height: 16rem;
 
+    }
+    .card-img-top{
+        height: 16rem;
+
+    }
+    .card-holder{
+        background-color: rgb(169, 140, 140);
+        border:  5px solid rebeccapurple;
     }
 }

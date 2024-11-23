@@ -17,6 +17,10 @@ app.get("/",(req,res)=>{
     res.render("./HOME/index.ejs");
     // res.send("working");
 })
+app.get("/demo",(req,res)=>{
+    res.render("./HOME/demo.ejs");
+
+});
 
 app.listen(port,(req,res)=>{
     console.log(`server working on ${port}`);
