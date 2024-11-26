@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PDF Viewer Example</title>
+    <style>
+        #pdf-container {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #pdf-container iframe {
+            width: 100%;
+            height: 600px;
+        }
+    </style>
 </head>
 <body>
-<iframe src="https://docs.google.com/document/d/1G4ZoUQB_f0KllOQNL02uHcJbHreo_FhHhZrdgk8151M/edit?tab=t.0" 
-frameborder="0"></iframe>
 
-<form id="upload-form" method="POST" enctype="multipart/form-data">
-    <label for="pdf-file">Upload PDF:</label>
-    <input type="file" id="pdf-file" name="pdf-file" accept="application/pdf" required>
-    <button type="submit">Upload</button>
-</form>
+    <button id="read-more-btn">Read More</button>
 
-<div id="iframe-container" style="margin-top: 20px; display: none;">
-    <iframe id="pdf-viewer" width="100%" height="600px"></iframe>
-</div>
+    <div id="pdf-container">
+        <iframe id="pdf-viewer" src="https://drive.google.com/file/d/10XmbG1glEUa5SkwRqJJgpIvdU5esbBFL/view?usp=drive_link.pdf" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        // JavaScript to handle button click and PDF display
+        document.getElementById('read-more-btn').addEventListener('click', () => {
+            const pdfContainer = document.getElementById('pdf-container');
+            const pdfViewer = document.getElementById('pdf-viewer');
+
+            // Set the PDF file URL (adjust this path to your actual PDF location)
+            const pdfUrl = 'https://docs.google.com/document/d/19-GZw7M_mKcuX-qJMWo60_ZQCIlWW3YRA5nAzo6hBek/edit?tab=t.0.pdf';
+            pdfViewer.src = pdfUrl;
+
+            // Show the PDF container
+            pdfContainer.style.display = 'block';
+        });
+    </script>
 
 </body>
-
 </html>
