@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign -Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @media screen and (max-width:600px) {
+        body {
+            background-color: rgb(194, 202, 191);
+        }
+
+        .body {
+            /* background-color: rgb(184, 108, 61); */
+            border: 2px solid black;
+            max-width: 28rem;
+            height: 42rem;
+            margin: 2rem 0 0 1.5rem;
+            /* display: inline-block; */
+        }
+
+        .log-body {
+            /* border: 2px solid red; */
+            height: 18rem;
+        }
+
+        .log-body img {
+            height: 19rem;
+            width: 18rem;
+            margin: 1rem 0 0 3rem;
+        }
+
+        #log-data {
+            margin: 5rem 0 0 5rem;
+            height: 18rem;
+        }
+
+        .log-data {
+            margin: 0 1rem 0 0;
+            display: grid;
+        }
+
+        .btn {
+            margin: 2rem 0 0 3rem;
+           
+           
+        }
+        .btn button{
+            width:5.5rem;
+            height: 1.8rem;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            border-radius: 1rem;
+        }
+
+        .log-data label {
+            font-size: 1.3rem;
+        }
+
+        .log-data input {
+            width: 14rem;
+            height: 1.3rem;
+        }
+    }
+</style>
+
+<body>
+    <div class="body">
+        <div class="log-body">
+            <img src="novel.jpg" alt="">
+        </div>
+        <div id="log-data">
+            <form action="/sign-up" method="POST">
+                <div class="log-data">
+                    <label for="Name">NAME: </label>
+                    <input placeholder="username" class="name" required>
+                    <br>
+                    <label for="Name">EMAIL: </label>
+                    <input placeholder="email-id" class="name" required>
+                    <br>
+                    <label for="Name">PASSWORD: </label>
+                    <input placeholder="enter the Password" class="name" required>
+                </div>
+                <div class="btn">
+                    <button>LOGIN</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

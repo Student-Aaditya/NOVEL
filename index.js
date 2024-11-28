@@ -22,6 +22,13 @@ app.get("/demo",(req,res)=>{
 
 });
 
+app.get("/sign",(req,res)=>{
+    res.render("./SIHNLOG/sign.ejs");
+})
+
+app.post("/sign-up",(req,res)=>{
+    res.render("./HOME/index.ejs");
+})
 app.listen(port,(req,res)=>{
     console.log(`server working on ${port}`);
 })
