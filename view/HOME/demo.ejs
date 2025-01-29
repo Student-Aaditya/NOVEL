@@ -1,45 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Viewer Example</title>
     <style>
-        #pdf-container {
-            display: none; /* Initially hidden */
-            margin-top: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .div {
+            background-color: rgba(0, 0, 0, 0.26);
+            margin: 10rem 0 0 4rem;
+            display: flex;
+            /* size: 5rem; */
+            width: 40rem;
+            height: 5rem;
+          
         }
-
-        #pdf-container iframe {
-            width: 100%;
-            height: 600px;
+        .div img{
+            margin: 0 0 0 5rem;
+            size: 4rem;
+           
+            
+        }
+        .div button:active:nth-of-type(2n){
+            /* background-color: red; */
+            color: white;
+        }
+        .div button:active:nth-of-type(2n+1){
+            background-color: blue;
+            color: white;
+        }
+        img{
+            width: 5rem;
+            height: 5rem;
+            /* border: 2px solid red; */
+        }
+        .btn{
+            size: 5rem;
         }
     </style>
 </head>
+
 <body>
+    <div class="div">
+   <!-- <button id="btn1">Home</button> -->
 
-    <button id="read-more-btn">Read More</button>
-
-    <div id="pdf-container">
-        <!-- <iframe id="pdf-viewer" src="https://drive.google.com/file/d/10XmbG1glEUa5SkwRqJJgpIvdU5esbBFL/view?usp=drive_link.pdf" frameborder="0"></iframe> -->
-    </div>
-
-    <script>
-        // JavaScript to handle button click and PDF display
-        document.getElementById('read-more-btn').addEventListener('click', () => {
-            const pdfContainer = document.getElementById('pdf-container');
-            const pdfViewer = document.getElementById('pdf-viewer');
-
-            // Set the PDF file URL (adjust this path to your actual PDF location)
-            const pdfUrl = 'https://docs.google.com/document/d/19-GZw7M_mKcuX-qJMWo60_ZQCIlWW3YRA5nAzo6hBek/edit?tab=t.0.pdf';
-            pdfViewer.src = pdfUrl;
-
-            // Show the PDF container
-            pdfContainer.style.display = 'block';
-        });
-    </script>
-
+    <div id="btn1" class="btn"><img  src="images.jpeg" alt="error"></div>
+   <!-- <button id="btn2">About</button> -->
+   <div id="btn2"><img  src="is.jpeg" alt="error"></div>
+   <!-- <button id="btn3">Store</button> -->
+   <div id="btn3"><img  src="sto.png" alt="error"></div>
+   <!-- <button id="btn4">Contact</button> -->
+   <div id="btn4"><img  src="call.png" alt="error"></div>
+</div>
 </body>
+<script>
+
+function Check(email){
+    // let email=email;
+    let len=email.length;
+    // const last="@gmail.com";
+    // let tar=0;
+    for(let i=0;i<len;i++){
+        if(email[i]=='@'){
+            console.log("valid");
+            
+        }
+    }
+   
+}   
+</script>
 </html>

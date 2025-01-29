@@ -1,52 +1,102 @@
-.navbar{
-    border: 2px solid black;
-}
-.navbar-log{
-    display: flex;
-    margin: 0 1rem 0 0;
-    font-size: 1.2rem;
-}
-.navbar-log a{
-    margin: 0 1rem 0 2rem ;
-}
-.navbar-nav{
-    margin: 0 0 0 4rem;
-    font-size: 1.2rem;
-}
-.navbar-nav a{
-    margin: 0 3rem 0 0;
-}
-.navbar-brand img{
-    max-width: 4rem;
-    max-height: 3rem;
-}
-@media screen and (max-width:600px){
-    .home-container{
-        display: grid;
+@media screen and (min-width:900px) {
+
+    .navbar {
+        border: 2px solid black;
     }
-    .container{
-        background-color: white;
+
+    .navbar-log {
+        display: flex;
+        margin: 0 1rem 0 0;
+        font-size: 1.3rem;
+    }
+
+    .navbar-log a {
+        margin: 0 1rem 0 2rem;
+    }
+
+    .navbar-nav {
+        margin: 0 0 0 4rem;
+        font-size: 1.3rem;
+    }
+
+    .navbar-nav a {
+        margin: 0 3rem 0 0;
+    }
+
+    .navbar-brand img {
+        max-width: 4rem;
+        max-height: 3rem;
+    }
+    .slider{
+        display: flex;
+    }
+    .slider p{
+        margin: 0 0 0 8rem;
+        width: 28rem;
+        height: 25rem;
+        font-size: 1.5rem;
+        text-align: justify;
     }
     .slider img{
+        margin: 0 0 0 8rem;
+        width: 30rem;
+        height: 25rem;
+    }
+    #card-holder{
+        display: flex;
+        margin: 2rem 0 0 4rem;
+    }
+    .card{
+        margin: 0 0 0 4rem;
+        width: 16rem;
+        padding: 1rem 0 0 1.5rem;
+    }
+    .card-body{
+        height: 10rem;
+    }
+    .card:hover{
+        box-shadow: 1rem 1rem 1rem wheat;
+    }
+    .card img{
+        width: 13rem;
+        height: 12rem;
+    }
+    #card-holder2{
+        margin: 2rem 0 0 4rem;
+        display: flex ;
+    }
+  
+}
+
+@media screen and (max-width:600px) {
+    .home-container {
+        display: grid;
+    }
+
+    .container {
+        background-color: white;
+    }
+
+    .slider img {
         margin: 1rem 0 1rem 0;
         width: 19rem;
         height: 19rem;
     }
-    .carousel-item img{
+
+    .carousel-item img {
         max-width: 25rem;
         height: 25rem;
     }
-    .card{
+
+    .card {
         margin: 0 0 1rem 1rem;
         max-width: 18rem;
         height: 16rem;
 
     }
-    .card-img-top{
+
+    .card-img-top {
         height: 16rem;
 
-    }
-    .card-holder{
-        background-color: rgb(245, 235, 235);
     }
 }
