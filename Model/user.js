@@ -8,7 +8,7 @@ const userSchema=new mongoose.Schema({
         required:true,
     },
     
-})
+});
 
 userSchema.plugin(passportlocalmongoose);
 module.exports=mongoose.model("User",userSchema);
