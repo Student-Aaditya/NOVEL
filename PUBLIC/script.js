@@ -6,11 +6,13 @@ btn.addEventListener("click", function() {
     if (email.includes('@gmail.com')) {
         console.log("valid");
     } else {
-        console.log("invalid");
-        
+        // console.log("invalid");
+        alert("enter valid email");
     }
 });
 
 module.exports = function Check(inputValue) {
     return inputValue.includes('@gmail.com');
 };
+
+

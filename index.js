@@ -8,8 +8,8 @@ const mongoose = require("mongoose");
 const User=require("./Model/user.js");
 const passport=require("passport");
 const passportLocal=require("passport-local");
-// const passportlocalmongoose=require("passport-local-mongoose");
 const session=require("express-session");
+// const check=require("./PUBLIC/script.js");
 
 app.set("views",path.join(__dirname,"view"));
 app.set("view engine","ejs");
@@ -75,9 +75,15 @@ app.post("/sign",async (req,res)=>{
 })
 
 
-app.get("/log",(req,res)=>{
+app.get("/login",(req,res)=>{
     res.render("./SIHNLOG/log.ejs");
 })
+
+app.post("/login", passport.authenticate("local", { failureRedirect: "/login", failureFlash: true }), async (req, res) => {
+    console.log("login");
+    res.redirect("/");
+})
+
 
 app.get("/contact",(req,res)=>{
     res.render("./HOME/contact.ejs")
@@ -88,11 +94,6 @@ app.get("/store",(req,res)=>{
     res.render("./HOME/store.ejs");
 })
 
-
-
-app.post("/login",(req,res)=>{
-    res.render("./Home/index.ejs");
-})
 
 app.listen(port,(req,res)=>{
     console.log(`server working on ${port}`);

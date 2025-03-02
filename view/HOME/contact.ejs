@@ -1,55 +1,95 @@
 <% layout("/INCLUDE/boilerplate")%>
-<style>
-    .div-contact{
-        width:45rem;
-        height: 40rem;
-        margin: 3rem 0 0 20rem;
-        background-color: beige
-    }
-    .data{
-        width: 45rem;
-        height: 35rem;
-        margin: 2rem 0 0 3rem;
-    }
-    .input{
-        margin: 4rem 0 0 3rem;
-    }
-    .text{
-        width: 30rem;
-        height: 5rem;
-        margin: 2rem 0 0 0;
-    }
-    #textarea{
-        width: 30rem;
-        height: 15rem;
-    }
-    .btn{
-        margin: 1rem 0 0 3rem;
-        font-size: 1.4rem;
+
+   
+    <style>
+        @media screen and (min-width:900px) {
+            
         
-    }
-    .btn button{
-        width: 30rem;
-        background-color: blue;
-        color: white;
-    }
-    .heading{
-        margin: 1rem 0 0 3rem;
+        body{
+            background-color: whitesmoke;
+        }
+        .body{
+            width: 500px;
+            height: 640px;
+            box-shadow: 8px 6px 10px rgb(240, 209, 151),8px 6px 20px wheat,10px 15px 19px wheat;
+            margin: 4rem 0 4rem 28rem;
+        }
+        .body-card{
+            width: 350px;
+            height: 400px;
+            margin: 1rem 0 0 4rem;
+        }
+       
+         .card-i img{
+            width: 110px;
+            height: 110px;
+            margin: 0 0 0 8rem;
+            cursor: pointer;
+        }
+        .card-main h1{
+            margin: 1rem 0 0 5rem;
+        }
+        .card-main p{
+            margin: 1rem 0 0 4rem;
+        }
+        .card-det{
+            width: 300px;
+            height: 220px;
+            margin: 4rem 0 0 3rem;
+        }
+        .card-det label{
+            font-size: 1.3rem;
+            margin: 0rem 0 0 1rem;
+        }
+        .card-det input{
+            margin: 0rem 0 2rem 1rem;
+            width: 250px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+
+        .btn button{
+            margin: 3rem 0 0 7rem;
+            font-size: 1.5rem;
+            border-radius: .8rem;
+            background-color: blue;
+            color: white;
+        }
+
+
+
+        .btn button:hover{
+            cursor: pointer;  
+            filter: drop-shadow(4px 2px 3px black);
+        }
     }
 
-</style>
-<div class="div-contact">
-    <div class="data">
-        <div class="heading">
-        <h1>Get In Touch</h1>
-        <span>Any need mail at @aadityakuamr518@gmail.com</span>
-    </div>
-        <div class="input">
-            <input type="text" placeholder="enter the email address" class="text">
-            <input placeholder="write the query" id="textarea" class="text"></input>
+    </style>
+
+  
+
+    <form action="/" method="POST">
+        <div class="body">
+            <div class="body-card">
+                <div class="card-i">
+                     <img src="email.png" alt="">
+                </div>
+                <div class="card-main">
+                    <h1>CONTACT US</h1>
+                    <p>Please Fill this form in a decent manner</p>
+                </div>
+                <div class="card-det">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" id="name" placeholder=""><br>
+                    <label for="email">E-Mail</label><br>
+                    <input type="text" name="email" id="email" placeholder=""><br>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" id="password" placeholder="">
+                </div>
+                <div class="btn">
+                    <button type="button">SUBMIT</button>
+                </div>
+            </div>
         </div>
-        <div class="btn">
-            <button>Submit</button>
-        </div>
-    </div>
-</div>
+    </form>
