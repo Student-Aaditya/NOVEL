@@ -8,8 +8,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link " href="/">Home</a>
-                <a class="nav-link" href="/store">Store</a>
-                <a class="nav-link" href="/blog">Library</a>
+                <a class="nav-link" href="/store">Library</a>
+                <a class="nav-link" href="/blog">Recommend</a>
                 <a class="nav-link " href="/contact" role="button">
                   Contact us
                 </a>
@@ -24,10 +24,13 @@
             </div>
             <div class="navbar-log ms-auto"  >
                 <!-- <a class="nav-link" href="/sign">Sign-up</a> -->
-    
+                <%if(!user){%>
                   <a class="nav-link " href="/sign">Sign-Up</a>
                   <a class="nav-link " href="/login">Log-In</a>
-            
+                  <%}%>
+                  <%if(user){%>
+                 <a class="nav-link " href="/logout">Log-Out</a>
+                 <%}%>
                   <!-- <a class="nav-link " href="/logout">Log-Out</a> -->
         
             </div>

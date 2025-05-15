@@ -1,72 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer Example</title>
-    <style>
-        .div {
-            background-color: rgba(0, 0, 0, 0.26);
-            margin: 10rem 0 0 4rem;
-            display: flex;
-            /* size: 5rem; */
-            width: 40rem;
-            height: 5rem;
-          
-        }
-        .div img{
-            margin: 0 0 0 5rem;
-            size: 4rem;
-           
-            
-        }
-        .div button:active:nth-of-type(2n){
-            /* background-color: red; */
-            color: white;
-        }
-        .div button:active:nth-of-type(2n+1){
-            background-color: blue;
-            color: white;
-        }
-        img{
-            width: 5rem;
-            height: 5rem;
-            /* border: 2px solid red; */
-        }
-        .btn{
-            size: 5rem;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="div">
-   <!-- <button id="btn1">Home</button> -->
-
-    <div id="btn1" class="btn"><img  src="images.jpeg" alt="error"></div>
-   <!-- <button id="btn2">About</button> -->
-   <div id="btn2"><img  src="is.jpeg" alt="error"></div>
-   <!-- <button id="btn3">Store</button> -->
-   <div id="btn3"><img  src="sto.png" alt="error"></div>
-   <!-- <button id="btn4">Contact</button> -->
-   <div id="btn4"><img  src="call.png" alt="error"></div>
-</div>
-</body>
-<script>
-
-function Check(email){
-    // let email=email;
-    let len=email.length;
-    // const last="@gmail.com";
-    // let tar=0;
-    for(let i=0;i<len;i++){
-        if(email[i]=='@'){
-            console.log("valid");
-            
-        }
+<% layout("/INCLUDE/boilerplate")%>
+ 
+  <style>
+    
+    .search-container {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    .card {
+      border-radius: 12px;
+      transition: transform 0.2s ease-in-out;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
    
-}   
-</script>
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+    .card-img-top {
+      object-fit: cover;
+      height: 250px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    
+    .card-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-text {
+      flex-grow: 1;
+    }
+    .read-more-btn {
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+<!-- navbar -->
+ 
+  <!-- Search Bar -->
+  <div class="search-container text-center">
+    <h2 class="mb-3">Search for Books</h2>
+    <div class="input-group mb-3">
+      <input type="text" id="bookInput" class="form-control" placeholder="Enter book name">
+      <button class="btn btn-primary" onclick="showBooks()">Search</button>
+    </div>
+  </div>
+
+  <!-- Result Cards -->
+  <div class="container">
+    <div id="bookResults" class="row g-4">
+      <!-- Book cards will appear here -->
+    </div>
+  </div>
+
+  <script>
+    let inp=document.getElementById("bookInput");
+    const sampleBooks = [
+      { title: "Animal Farm", author: "George Orwell", img: "https://m.media-amazon.com/images/I/61MNVWxLHXL._UF1000,1000_QL80_.jpg"  },
+      { title: "The Handmaid's Tale", author: " Bruce Miller", img: "https://m.media-amazon.com/images/S/pv-target-images/544ca7b4fd7087f729c5077777df4e8e995e863d7f9d9143934dfa12aacb77d5.jpg" },
+      { title: "Brave New World", author: "Aldous Huxley", img: "https://rukminim2.flixcart.com/image/850/1000/xif0q/book/w/1/s/brave-new-world-by-aldous-huxley-original-imah33zxgzg2dexe.jpeg?q=20&crop=false" },
+      { title: "The Vampire Lestat", author: "ANNE RICE	", img: "http://images.amazon.com/images/P/0345313860.0...	" },
+      { title: "The Hours : A Novel", author: "Michael Cunningham", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpqhhDB6HYeDqAEu7Sl41wROqZ8jNtZIAUvA&s" }
+    ];
+    
+    function showBooks() {
+      const bookResults = document.getElementById("bookResults");
+      bookResults.innerHTML = "";
+      if(inp.value=="1984"){
+      sampleBooks.forEach(book => {
+        const col = document.createElement("div");
+        col.className = "col-md-4";
+
+        col.innerHTML = `
+          <div class="card h-100">
+            <img src="${book.img}" class="card-img-top" alt="${book.title}">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">${book.title}</h5>
+              <p class="card-text text-muted">${book.author}</p>
+              
+              <a href="#" class="btn btn-primary read-more-btn">Read More</a>
+            </div>
+          </div>
+        `;
+
+        bookResults.appendChild(col);
+      });
+    }
+    }
+  </script>
+
+</body>
 </html>
