@@ -90,6 +90,21 @@ app.post("/login", passport.authenticate("local", {
     res.redirect("/");
 });
 
+app.get("/logout", (req, res) => {
+    try {
+        req.logOut((err) => {
+            if (err) {
+                nextTick(err);
+            }
+            res.redirect("/");
+        })
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).send("please fill the data");
+    }
+})
+
 app.get("/contact", (req, res) => {
     res.render("./HOME/contact.ejs");
 });
