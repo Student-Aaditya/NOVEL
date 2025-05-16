@@ -71,11 +71,39 @@
       { title: "The Hours : A Novel", author: "Michael Cunningham", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpqhhDB6HYeDqAEu7Sl41wROqZ8jNtZIAUvA&s" }
     ];
     
+     const sampleBook = [
+      { title: "Harry Potter and the Philosopher's Stone", author: "J. K. Rowling,",img:"https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_banner.jpg/250px-Harry_Potter_and_the_Philosopher%27s_Stone_banner.jpg"  },
+      { title: "Harry Potter and the Chamber of Secrets", author: " J. K. Rowling", img: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT-qDcD2XSUIxf_2ZDpUms2HKfAFW7Sv8ET8Fv8Oxv1EaEMzZtK" },
+      { title: "Harry Potter and The Deathly Hallows", author: "J. K. Rowling", img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTNsZ_sUnfnEYgfM1Ro-4QXySSLd0gOJnwVkZU_NWGBqsJCQaIj" },
+      // { title: "The Vampire Lestat", author: "ANNE RICE	", img: "http://images.amazon.com/images/P/0345313860.0...	" },
+      // { title: "The Hours : A Novel", author: "Michael Cunningham", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpqhhDB6HYeDqAEu7Sl41wROqZ8jNtZIAUvA&s" }
+    ];
+
     function showBooks() {
       const bookResults = document.getElementById("bookResults");
       bookResults.innerHTML = "";
       if(inp.value=="1984"){
       sampleBooks.forEach(book => {
+        const col = document.createElement("div");
+        col.className = "col-md-4";
+
+        col.innerHTML = `
+          <div class="card h-100">
+            <img src="${book.img}" class="card-img-top" alt="${book.title}">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">${book.title}</h5>
+              <p class="card-text text-muted">${book.author}</p>
+              
+              <a href="#" class="btn btn-primary read-more-btn">Read More</a>
+            </div>
+          </div>
+        `;
+
+        bookResults.appendChild(col);
+      });
+    }
+    if(inp.value=="Harry Potter"){
+      sampleBook.forEach(book => {
         const col = document.createElement("div");
         col.className = "col-md-4";
 
